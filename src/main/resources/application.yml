@@ -1,0 +1,23 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://218.145.110.135:8001/eureka
+      #defaultZone: http://localhost:8001/eureka
+
+server:
+  port: 8000
+
+management:
+  endpoint:
+    routes:
+      enabled: true
+    filters:
+      enabled: true
+  endpoints:
+web:
+  exposure:
+    include: routes, filters
